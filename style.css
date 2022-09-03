@@ -1,0 +1,93 @@
+html{
+    overflow: hidden;
+    background-color: rgba(40, 40, 40, 1);
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.frame{
+    width: 350px;
+    height: 350px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    border: solid 5px rgba(100, 100, 100, .2);
+    box-shadow: 0px -15px 15px rgba(255, 255, 255, 0.07),
+                inset 0px -15px 15px rgba(255, 255, 255, 0.07),
+                0px 15px 15px rgba(0, 0, 0, 0.35),
+                inset 0px 15px 15px rgba(0, 0, 0, 0.35);
+}
+.frame::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 255, 255, 1);
+    box-shadow: 0px -15px 15px rgba(255, 255, 255, 0.07),
+    inset 0px -15px 15px rgba(255, 255, 255, 0.07),
+    0px 15px 15px rgba(0, 0, 0, 0.35),
+    inset 0px 15px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 25%;
+    z-index: 1;
+}
+.marker{
+    position: absolute;
+    width: 8px;
+    height: 30px;
+    background-color: rgba(20, 20, 20, .75);
+    z-index: 0;
+    box-shadow: 0px -15px 15px rgba(255, 255, 255, 0.07),
+    inset 0px -15px 15px rgba(255, 255, 255, 0.07),
+    0px 15px 15px rgba(0, 0, 0, 0.3);
+}
+#one{
+    transform: translate(-50%);
+    left: 50%;
+}
+#two{
+    transform: translate(-50%,-50%) rotate(90deg);
+    transform-origin: left;
+    left: 342px;
+    top: 49%;
+}
+#three{
+    transform: translate(-50%) rotate(180deg);
+    left: 50%;
+    top: 325px;
+}
+#four{
+    transform: translate(-50%,-50%) rotate(90deg);
+    transform-origin: left;
+    left: 24px;
+    top: 49%;
+}
+.hand{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(-90deg);
+    background-color: rgb(230, 230, 230);
+    transform-origin: left;
+    transition: all .08s;
+}
+#sec{
+    width: 165px;
+    height: 2px;
+    transition-timing-function: cubic-bezier(0,2.25,.69,.55);
+    background-color: rgb(255, 97, 97);
+}
+#min{
+    width: 110px;
+    height: 3px;
+    transition: all .75s;
+}
+#hr{
+    width: 80px;
+    height: 5px;
+    transition: all .5s;
+}
